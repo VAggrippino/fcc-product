@@ -47,6 +47,19 @@ header .subtitle {
   grid-template-columns: 1fr;
 }
 
+.product section {
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.product h2 {
+  margin-bottom: 0;
+}
+
+.product h2 + * {
+  margin-top: 0;
+}
+
 .product--name {
   grid-row: 1/2;
   padding: 0.5em;
@@ -55,10 +68,13 @@ header .subtitle {
 
 .product--name--title {
   margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.product--images {
+.product .product--images {
   grid-row: 2/3;
+  padding: 0;
 }
 
 .product--images img {
@@ -83,4 +99,25 @@ header .subtitle {
 
 .product--images--selectors button {
   padding: var(--spacing);
+}
+
+.product--description {
+  padding: 0 0.5rem;
+}
+
+.product--video {
+  padding: 0 0.5rem;
+}
+
+.product--video--box {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.product--video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
