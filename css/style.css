@@ -111,6 +111,10 @@ header .byline {
   object-fit: contain;
 }
 
+.product--images--display {
+  overflow: hidden;
+}
+
 .product--images--selectors {
   --spacing: 0.25rem;
   display: grid;
