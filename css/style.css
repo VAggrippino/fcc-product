@@ -1,3 +1,6 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css");
+
 :root {
   --header-size: 4rem;
 }
@@ -285,4 +288,44 @@ footer {
   background-color: #111;
   color: white;
   padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: silver;
+}
+
+footer a {
+  color: inherit;
+  transition-property: color, transform;
+  transition-duration: 500ms;
+}
+
+footer a:hover {
+  color: aqua;
+}
+
+.footer--social {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+}
+
+.footer--social a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.footer--social a:hover {
+  transform: scale(1.1);
+}
+
+.footer--social .fa-codepen {
+  color: black;
+  font-size: 1.3em;
 }
