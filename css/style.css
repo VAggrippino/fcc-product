@@ -115,6 +115,22 @@ header .byline {
   position: relative;
 }
 
+.product--images--notes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: lemonchiffon;
+  padding: 0.25rem;
+  border: 1px dotted brown;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.product--images--notes ul {
+  margin: 0.5em;
+  padding: 0 0 0 1em;
+}
+
 .product--images--selectors {
   --spacing: 0.25rem;
   display: grid;
