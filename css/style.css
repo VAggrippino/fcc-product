@@ -50,7 +50,7 @@ header .byline {
   text-align: right;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   header {
     display: flex;
   }
@@ -87,9 +87,9 @@ header .byline {
   margin-top: 0;
 }
 
-.product--name {
+.product .product--name {
   grid-row: 1/2;
-  padding: 0.5em;
+  padding: 2rem 0.5em 0;
   box-sizing: border-box;
 }
 
@@ -152,10 +152,30 @@ header .byline {
   left: 0;
 }
 
-@media (min-width: 40rem) {
+.product--specifications--category {
+}
+
+.product--specifications--category h1 {
+  font-size: 1.5rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px 0 1px;
+}
+
+.product--specifications--category > :not(h1) {
+  margin-left: 0.5rem;
+}
+
+.product--specifications--category h2 {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+@media (min-width: 50rem) {
   .product {
     --thumbnail-size: 8rem;
     grid-template-columns: 1fr 1fr;
+    margin: 0 1rem;
   }
 
   .product .product--images {
@@ -165,6 +185,10 @@ header .byline {
 
     display: grid;
     grid-template-rows: auto var(--thumbnail-size);
+  }
+
+  .product--images--selectors {
+    padding: calc(var(--spacing)*2) var(--spacing);
   }
 
   .product--images--display img {
@@ -180,9 +204,8 @@ header .byline {
     position: absolute;
     left: 105%;
     top: 5%;
-    border: 1px solid black;
     display: none;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
   }
 
   .product--images--zoom .drift-zoom-pane {
@@ -220,7 +243,25 @@ header .byline {
   .product .product--specifications {
     grid-row: 12/13;
     grid-column: 1/3;
-    columns: 2;
+  }
+
+  .product--specifications--categories {
+    columns: 2 auto;
+    padding: 0 2rem;
+  }
+
+  .product--specifications--categories h1 {
+    break-after: avoid;
+  }
+
+  .product--specifications--item {
+    break-inside: avoid;
+  }
+}
+
+@media (min-width: 80rem) {
+  .product--specifications--categories {
+    columns: 3 auto;
   }
 }
 
