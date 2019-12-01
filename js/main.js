@@ -14,7 +14,13 @@ window.addEventListener(`load`, () => {
       }
 
       display_image.setAttribute(`src`, url);
+      display_image.setAttribute(`data-zoom`, url);
       display_image.setAttribute(`alt`, alt);
     });
+  });
+
+  new Drift(document.querySelector(`.product--images--display img`), {
+    paneContainer: document.querySelector(`.product--images--zoom`),
+    hoverBoundingBox: true,
   });
 });
