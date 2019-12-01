@@ -1,20 +1,18 @@
+import { getImageProperties } from './getImageProperties.js';
+
 window.addEventListener(`load`, () => {
   const selector_buttons = document.querySelectorAll(`.product--images--selectors button`);
+
   selector_buttons.forEach((button) => {
     button.addEventListener(`click`, (e) => {
       const display_image = document.querySelector(`.product--images--display img`);
-      let url;
-      let alt;
-      if ( e.target.tagName === `IMG` ) {
-        url = e.target.getAttribute(`src`);
-        alt = e.target.getAttribute(`alt`);
-      } else if ( e.target.tagName === `BUTTON` ) {
-        url = e.target.childNodes[0].getAttribute(`src`);
-        alt = e.target.childNodes[0].getAttribute(`alt`);
-      }
+      const display_link = document.querySelector(`.product--images--display a`);
+      const target_image = (e.target.tagName === `IMG`) ? e.target : e.target.firstChild;
+      const { src, alt } = getImageProperties( target_image );
 
-      display_image.setAttribute(`src`, url);
-      display_image.setAttribute(`data-zoom`, url);
+      display_link.setAttribute(`href`, src);
+      display_image.setAttribute(`src`, src);
+      display_image.setAttribute(`data-zoom`, src);
       display_image.setAttribute(`alt`, alt);
     });
   });
