@@ -116,6 +116,7 @@ header .byline {
 }
 
 .product--images--notes {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -174,9 +175,6 @@ header .byline {
   left: 0;
 }
 
-.product--specifications--category {
-}
-
 .product--specifications--category h1 {
   font-size: 1.5rem;
   border-color: black;
@@ -207,6 +205,10 @@ header .byline {
 
     display: grid;
     grid-template-rows: auto var(--thumbnail-size);
+  }
+
+  .product--images--notes {
+    display: block;
   }
 
   .product--images--selectors {
