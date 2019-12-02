@@ -153,9 +153,15 @@ header .byline {
 
 .product--video {
   padding: 0 0.5rem;
+  width: calc( 90vh * 16 / 9 );
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product--video--box {
+  flex: 100%;
   padding-top: 56.25%;
   position: relative;
 }
