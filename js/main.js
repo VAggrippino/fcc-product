@@ -17,6 +17,7 @@ window.addEventListener(`load`, () => {
       display_source1.srcset = target_source1.dataset.fullsize;
       display_source2.srcset = target_source2.dataset.fullsize;
       display_image.src = target_image.src;
+      display_image.dataset.zoom = target_image.dataset.fullsize;
       display_image.alt = target_image.alt;
       display_link.href = target_image.src;
     });
