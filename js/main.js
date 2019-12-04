@@ -1,3 +1,5 @@
+import { cssFallback } from './cssFallback.js';
+
 window.addEventListener(`load`, () => {
   const selector_buttons = document.querySelectorAll(`.product--images--selectors button`);
 
@@ -22,6 +24,9 @@ window.addEventListener(`load`, () => {
       display_link.href = target_image.src;
     });
   });
+
+  const fontawesome_cdn = document.getElementById(`fontawesome-cdn`);
+  cssFallback(fontawesome_cdn.href, `css/all.min.css`);
 
   new Drift(document.querySelector(`.product--images--display img`), {
     paneContainer: document.querySelector(`.product--images--zoom`),
